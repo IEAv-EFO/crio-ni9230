@@ -141,10 +141,6 @@ AddOutputFilter chunkFilter
 		<Property Name="target.WebServer.ViAccess" Type="Str">+*</Property>
 		<Property Name="target.webservices.SecurityAPIKey" Type="Str">PqVr/ifkAQh+lVrdPIykXlFvg12GhhQFR8H9cUhphgg=:pTe9HRlQuMfJxAG6QCGq7UvoUpJzAzWGKy5SbZ+roSU=</Property>
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
-		<Item Name="SubVIs" Type="Folder">
-			<Item Name="Display TEDS Data.vi" Type="VI" URL="../../../../Shared/Display TEDS Data.vi"/>
-			<Item Name="TEDS Binary to Table.vi" Type="VI" URL="../../../../Shared/TEDS Binary to Table.vi"/>
-		</Item>
 		<Item Name="Chassis" Type="cRIO Chassis">
 			<Property Name="crio.ProgrammingMode" Type="Str">fpga</Property>
 			<Property Name="crio.ResourceID" Type="Str">RIO0</Property>
@@ -704,7 +700,10 @@ AddOutputFilter chunkFilter
 				</Item>
 			</Item>
 		</Item>
+		<Item Name="make_waveform (SubVI).vi" Type="VI" URL="../src/make_waveform (SubVI).vi"/>
 		<Item Name="NI 9230  (Host).vi" Type="VI" URL="../src/NI 9230  (Host).vi"/>
+		<Item Name="NI 9230 pd-demodulation (Host).vi" Type="VI" URL="../src/NI 9230 pd-demodulation (Host).vi"/>
+		<Item Name="xy-chart (SubVI).vi" Type="VI" URL="../src/xy-chart (SubVI).vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="__closeStorageFromObject.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/storage/Storage.llb/__closeStorageFromObject.vi"/>
@@ -937,6 +936,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="specialProperties.ctl" Type="VI" URL="/&lt;vilib&gt;/Platform/storage/Storage.llb/specialProperties.ctl"/>
+				<Item Name="subBuildXYGraph.vi" Type="VI" URL="/&lt;vilib&gt;/express/express controls/BuildXYGraphBlock.llb/subBuildXYGraph.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
 				<Item Name="TDMSAddBlankElem1d.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/tdmsutil.llb/TDMSAddBlankElem1d.vi"/>
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
@@ -959,10 +959,15 @@ AddOutputFilter chunkFilter
 				<Item Name="WDT Number of Waveform Samples I32.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples I32.vi"/>
 				<Item Name="WDT Number of Waveform Samples SGL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples SGL.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
+				<Item Name="Write Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (DBL).vi"/>
+				<Item Name="Write Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (I64).vi"/>
+				<Item Name="Write Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet (string).vi"/>
+				<Item Name="Write Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Delimited Spreadsheet.vi"/>
 				<Item Name="Write File+ (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write File+ (string).vi"/>
+				<Item Name="Write Spreadsheet String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Write Spreadsheet String.vi"/>
 			</Item>
 			<Item Name="Basic TEDS.ctl" Type="VI" URL="../../../../../../Program Files/National Instruments/LabVIEW 2021/vi.lib/teds/TEDS_api.llb/Basic TEDS.ctl"/>
-			<Item Name="Display TEDS Data.vi" Type="VI" URL="../shared/Display TEDS Data.vi"/>
+			<Item Name="Display TEDS Data.vi" Type="VI" URL="../src/Display TEDS Data.vi"/>
 			<Item Name="lvStorage.dll" Type="Document" URL="lvStorage.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -970,7 +975,7 @@ AddOutputFilter chunkFilter
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="TEDS Binary to Table.vi" Type="VI" URL="../shared/TEDS Binary to Table.vi"/>
+			<Item Name="TEDS Binary to Table.vi" Type="VI" URL="../src/TEDS Binary to Table.vi"/>
 			<Item Name="TEDS Templates.ctl" Type="VI" URL="../../../../../../Program Files/National Instruments/LabVIEW 2021/vi.lib/teds/TEDS_api.llb/TEDS Templates.ctl"/>
 			<Item Name="teds_Check bounds.vi" Type="VI" URL="../../../../../../Program Files/National Instruments/LabVIEW 2021/vi.lib/teds/_teds_core.llb/teds_Check bounds.vi"/>
 			<Item Name="teds_Check property.vi" Type="VI" URL="../../../../../../Program Files/National Instruments/LabVIEW 2021/vi.lib/teds/_teds_core.llb/teds_Check property.vi"/>
