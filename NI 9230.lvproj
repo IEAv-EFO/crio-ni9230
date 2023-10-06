@@ -716,6 +716,7 @@ AddOutputFilter chunkFilter
 		<Item Name="make_waveform (SubVI).vi" Type="VI" URL="../src/make_waveform (SubVI).vi"/>
 		<Item Name="NI 9230  (Host).vi" Type="VI" URL="../src/NI 9230  (Host).vi"/>
 		<Item Name="NI 9230 pd-demodulation (Host).vi" Type="VI" URL="../src/NI 9230 pd-demodulation (Host).vi"/>
+		<Item Name="PD demodulation cRIO.vi" Type="VI" URL="../../PD demodulation cRIO.vi"/>
 		<Item Name="xy-chart (SubVI).vi" Type="VI" URL="../src/xy-chart (SubVI).vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
